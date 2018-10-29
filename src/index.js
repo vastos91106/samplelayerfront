@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+import Board from './components/Board'
 import style from './style.css';
 
 class App extends Component {
@@ -8,6 +9,7 @@ class App extends Component {
         return (
             <div className={style.app}>
                 Hello i'am App
+                <Board text={"hello from app"}/>
             </div>
         )
     }

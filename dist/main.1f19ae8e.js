@@ -23076,7 +23076,60 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"src/components/Board/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var Board =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Board, _Component);
+
+  function Board(props) {
+    _classCallCheck(this, Board);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Board).call(this, props));
+  }
+
+  _createClass(Board, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", null, _react.default.createElement("span", null, this.props.text), _react.default.createElement("br", null), "Hello i'am board");
+    }
+  }]);
+
+  return Board;
+}(_react.Component);
+
+var _default = Board;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -23161,6 +23214,8 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _Board = _interopRequireDefault(require("./components/Board"));
+
 var _style = _interopRequireDefault(require("./style.css"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -23201,7 +23256,9 @@ function (_Component) {
     value: function render() {
       return _react.default.createElement("div", {
         className: _style.default.app
-      }, "Hello i'am App");
+      }, "Hello i'am App", _react.default.createElement(_Board.default, {
+        text: "hello from app"
+      }));
     }
   }]);
 
@@ -23210,7 +23267,7 @@ function (_Component) {
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./style.css":"src/style.css"}],"main.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./components/Board":"src/components/Board/index.js","./style.css":"src/style.css"}],"main.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -23249,7 +23306,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37753" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33649" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

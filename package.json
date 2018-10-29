@@ -1,0 +1,30 @@
+{
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "dependencies": {
+    "@aspnet/signalr": "1.0.2",
+    "autoprefixer": "^9.0.1",
+    "mobx": "^4.0.0 || ^5.0.0",
+    "mobx-react": "^5.2.3",
+    "moment": "^2.22.2",
+    "postcss-modules": "^1.3.0",
+    "prop-types": "^15.6.0",
+    "react": "^0.14.0 || ^15.0.0 || ^16.0.0",
+    "react-contenteditable": "^2.1.5",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-dom": "^0.14.0 || ^15.0.0 || ^16.0.0",
+    "react-router-dom": "^4.3.1",
+    "react-scrollbar": "^0.5.4",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "parcel-bundler": "^1.9.7",
+    "tslib": "^1.9.3"
+  }
+}
